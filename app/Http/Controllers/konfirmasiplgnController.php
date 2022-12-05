@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\kode;
 
-class KodeController extends Controller
+class konfirmasiplgnController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -111,14 +111,5 @@ class KodeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
-    {
-        $table = kode::find($id);
-        if ($table){
-            $table->delete();
-            return ["messege" => "success"];
-        }else{
-            return ["messege" => "failed"];
-        }
-    }
+    
 }

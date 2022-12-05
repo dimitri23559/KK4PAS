@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class kode extends Model
 {
-    protected $fillable = ['code','status_pembayaran'];
+    protected $fillable = ['code','status_pembayaran','checkin','checkout'];
 }

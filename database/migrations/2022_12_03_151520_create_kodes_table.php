@@ -15,8 +15,10 @@ return new class extends Migration
     {
         Schema::create('kodes', function (Blueprint $table) {
             $table->id();
-            $table->string('code');
+            $table->string('code')->unique()->nullable();
             $table->string('status_pembayaran');
+            $table->date('checkin')->nullable();
+            $table->date('checkout')->nullable();
             $table->timestamps();
         });
     }
